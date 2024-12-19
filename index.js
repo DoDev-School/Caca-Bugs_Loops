@@ -1,19 +1,33 @@
-//CAÇA BUGS - LOOPS
+// CAÇA BUGS - ARRAYS
 
-let contagem = prompt("insira o número de produtos que deseja inserir:")
+var numeros = []
+var pares = []
+var impares = []
 
-for (let index = 0; index < contagem - 1; index++) {
-    let continuar = false
-    let nome = prompt("insira o nome do " + index + "º produto")
-    let preco = prompt("insira o preço do produto")
-    while (continuar) {
-        nome = prompt("insira o nome do " + index + "º produto")
-        let preco = prompt("insira o preço do produto")
-        let confirmar = prompt("As informações estão corretas? Nome:"  nome  ", Preço: "  preco "  (s/n)")
-        if (confirmar == "s") {
-            continuar = true
-        }
-    }
-    console.log(index "º Produto"  ", Nome: "  nome  ", Preço: "  preco)
+for (var i = 0; i <= 10; i++) {
+    var numero = parseInt(prompt("Informe o" + i + "º número:"))
+    pares[i] = numero
 }
+
+// Separando os números pares e ímpares
+var contadorImpar = 0
+var contadorPar = 0
+
+for (var i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 != 0) {
+        pares[contadorImpar] = pares[i]
+        numeros++
+    }
+    else {
+        impares[contadorPar] = impares[i]
+        numeros++
+    }
+}
+
+// Exibindo os três vetores no console
+console.log("Números informados: " + numeros)
+console.log("Números pares:" + pares)
+console.log("Números impares:" + impares)
+
+
 
